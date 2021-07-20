@@ -1,0 +1,10 @@
+cron:
+
+
+- description: 'update Question Status'
+  url: /seminar/get/active/time/
+  schedule: every 1 minutes
+  timezone: Asia/Calcutta
+  # retry_parameters:
+  #   min_backoff_seconds: 2.5
+  #   max_doublings: 5

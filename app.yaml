@@ -1,0 +1,47 @@
+# application: ssca-api
+# version: live
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+libraries:
+- name: ssl
+  version: latest
+
+- name: MySQLdb
+  version: latest
+
+
+handlers:
+
+- url: /api/blob_upload 
+  script: blob_upload.app
+
+
+# - url: /api/.*  
+#   script: api.app
+#   secure: always
+
+# - url: /seminar/.*
+#   script: seminar.app
+
+- url: /education/.*
+  script: education.app
+
+# - url: /myn/.*
+#   script: myn.app
+
+# - url: /act/.*
+#   script: act.app
+
+# - url: /payroll/.*
+#   script: payroll.app
+
+
+# - url: /exam/.*
+#   script: exam.app
+
+- url: /images
+  static_dir: images
+
+
